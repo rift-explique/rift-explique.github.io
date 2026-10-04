@@ -10,7 +10,7 @@ window.Extension = (function(){
   var DOSSIER = REPO + "/tree/main/extension";
 
   var ATOUTS = [
-    { t:"Les 1327 cartes",
+    { t:"Les 1333 cartes",
       s:"Nom, texte de règles et, sur les cartes qui le méritent, une note qui explique le piège. " +
         "Tout le jeu est couvert : Origins, Proving Grounds, Spiritforged, Unleashed, Vendetta et Radiance." },
     { t:"Les mots-clés restent en anglais",
@@ -96,9 +96,9 @@ window.Extension = (function(){
           '<p class="xt-dl-sub">Archive du projet · les cinq étapes sont juste en dessous</p>' +
         '</div>' +
         '<ul class="xt-facts">' +
-          '<li><b>1327</b> cartes traduites</li>' +
+          '<li><b>1333</b> cartes traduites</li>' +
           '<li><b>1065</b> rappels de règles</li>' +
-          '<li><b>964</b> notes explicatives</li>' +
+          '<li><b>970</b> notes explicatives</li>' +
           '<li><b>0</b> donnée envoyée</li>' +
         '</ul>' +
       '</section>' +

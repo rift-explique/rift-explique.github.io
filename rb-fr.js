@@ -1,5 +1,5 @@
 /* ============================================================
-   rb-fr.js — traductions françaises des 1327 cartes
+   rb-fr.js — traductions françaises des 1333 cartes
    ------------------------------------------------------------
    Clé = numéro de collection de la carte (champ "code").
    n    : nom français
@@ -2478,6 +2478,11 @@ window.RB_FR = {
     tx: "Quand tu me joues, ou quand je deviens épuisée, crée un jeton d'unité Recrue de 1 Puissance dans ta base.\nJ'ai +1 Puissance pour chaque autre unité épuisée que tu contrôles.",
     note: "Elle gagne +1 Puissance par autre unité épuisée que tu contrôles : plus tu attaques avec le reste du plateau, plus elle grossit."
   },
+  "RAD-T02": {
+    n: "Bombe",
+    tx: "Deploy. (Ne se joue que sur un champ de bataille. Quand un adversaire tient ce champ de bataille, cet équipement meurt.)\nDeathknell : inflige 2 dégâts à une unité ennemie présente ici et tue toutes tes autres Bombes présentes ici.",
+    note: "Les Bombes s'entretuent : une seule explosion emporte toutes tes autres Bombes présentes au même endroit, sans infliger leurs dégâts."
+  },
   "SFD-001/221": {
     n: "Contre toute attente",
     tx: "Reaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nDonne à une unité alliée présente sur un champ de bataille +2 Puissance ce tour-ci pour chaque unité ennemie présente au même endroit."
@@ -3811,6 +3816,16 @@ window.RB_FR = {
     tx: "Quand une de tes unités devient Mighty, tu peux m'épuiser pour canaliser 1 rune, épuisée. (Une unité est Mighty tant qu'elle a 5 Puissance ou plus.)",
     note: "Légende de Fiora : « devient » Mighty, donc un simple bonus temporaire de +1 Puissance suffit à déclencher l'effet."
   },
+  "SFD-T01": {
+    n: "Méca",
+    tx: "Aucun texte de règles.",
+    note: "Jeton d'unité de 3 Puissance, amené en jeu par les cartes à Mécas."
+  },
+  "SFD-T02": {
+    n: "Soldat des sables",
+    tx: "Aucun texte de règles.",
+    note: "Jeton d'unité de 2 Puissance, l'armée d'Azir. Comme tout jeton, il disparaît définitivement dès qu'il quitte le plateau."
+  },
   "SFD-T03": {
     n: "Or",
     tx: "Tuer ce jeton et l'épuiser : Reaction — ajoute 1 Essence runique, de n'importe quel domaine. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
@@ -5142,9 +5157,9 @@ window.RB_FR = {
     note: "Jeton amené en jeu par la légende d'Ivern, en remplacement d'un champ de bataille existant. La seconde ligne permet de remettre l'original en place."
   },
   "UNL-T04": {
-    n: "Amélioration",
-    tx: "Riftbound : Buff. Une unité ne peut pas avoir plus d'une Buff à la fois.",
-    note: "Jeton repère, pas une carte jouable. Une Buff vaut +1 Puissance ; certaines cartes la « dépensent » pour un effet."
+    n: "Buff",
+    tx: "Riftbound : Buff. Une unité ne peut pas avoir plus d'un Buff à la fois.",
+    note: "Jeton repère, pas une carte jouable. Un Buff vaut +1 Puissance ; certaines cartes le « dépensent » pour un effet."
   },
   "UNL-T05": {
     n: "Or",
@@ -6284,9 +6299,24 @@ window.RB_FR = {
     tx: "Épuiser : Reaction — ajoute 2 Énergie. Cette Énergie ne peut être dépensée que pour jouer des sorts.",
     note: "2 Énergie par tour réservées aux sorts : elle fait tourner les decks de contrôle."
   },
+  "VEN-T01": {
+    n: "Empowered",
+    tx: "Sert à marquer les légendes, unités et équipements qui sont Empowered.",
+    note: "Jeton repère, pas une carte jouable : il rappelle seulement ce qui est Empowered sur le plateau."
+  },
   "VEN-T04": {
     n: "Recrue",
     tx: "Aucun texte de règles.",
     note: "Jeton d'unité de 1 Puissance. Comme tout jeton, il disparaît définitivement dès qu'il quitte le plateau."
+  },
+  "VEN-T05": {
+    n: "Clone d'ombre",
+    tx: "Quand j'attaque, tu peux bannir une unité de ta défausse. Si tu le fais, donne-moi Assault 4 ce tour-ci. (+4 Puissance tant que je suis attaquant.)",
+    note: "0 Puissance au départ : sans unité à bannir dans ta défausse, il n'inflige rien."
+  },
+  "VEN-T06": {
+    n: "Tentacule",
+    tx: "Aucun texte de règles.",
+    note: "Jeton d'unité de 1 Puissance."
   }
 };
