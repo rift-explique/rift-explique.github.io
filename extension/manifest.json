@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Riftbound en français",
-  "version": "1.25.0",
+  "version": "1.26.0",
   "description": "Traduction francaise des cartes Riftbound au survol, sur Rift Atlas et dans le simulateur. Mots-cles en anglais comme sur la carte, phrases en francais.",
   "content_scripts": [
     {

@@ -408,10 +408,24 @@
     return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom && rect.width > 20;
   }
 
+  // Le simulateur ne sert pas ses jetons comme les cartes : pas de numéro de
+  // collection dans l'adresse, mais un dossier /tokens/<nom>/board.webp. On
+  // reconstruit le nom anglais à partir de ce bout d'adresse — « sand-soldier »
+  // comme « SandSoldier » donnent « sand soldier ».
+  function nomJeton(img) {
+    var s = img.currentSrc || img.src || (img.dataset && img.dataset.cardArtSource) || "";
+    var m = s.match(/\/tokens\/([A-Za-z0-9_-]+)[/.]/);
+    if (!m) return null;
+    return m[1].replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+               .replace(/[-_]+/g, " ").toLowerCase().trim();
+  }
+
   function cardFromImg(img) {
     var c = codeFromImg(img);
     // on garde l'élément : le panneau se cale sur la carte, pas sur le curseur
-    return c ? { code: c, name: img.alt, el: img } : null;
+    if (c) return { code: c, name: img.alt, el: img };
+    var j = nomJeton(img);
+    return j ? { code: null, name: j, el: img } : null;
   }
 
   function cardAt(target, x, y) {
@@ -445,7 +459,8 @@
     // la plus petite image de carte dont le rectangle contient le curseur
     var node = target, best = null, bestArea = Infinity;
     for (var lvl = 0; lvl < 6 && node && node !== document.body; lvl++) {
-      var imgs = node.querySelectorAll ? node.querySelectorAll('img[src*="/cards/"]') : [];
+      var imgs = node.querySelectorAll
+        ? node.querySelectorAll('img[src*="/cards/"], img[src*="/tokens/"]') : [];
       for (var k = 0; k < imgs.length; k++) {
         var r = imgs[k].getBoundingClientRect();
         if (inside(r, x, y)) {
