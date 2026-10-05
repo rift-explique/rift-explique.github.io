@@ -813,9 +813,10 @@
       a.classList.toggle("rbfr-has", has);
     });
     if (INGAME) {
-      document.querySelectorAll('img[src*="/cards/"]').forEach(function (img) {
+      // les jetons passent par /tokens/<nom>/ : ils méritent le même liseré
+      document.querySelectorAll('img[src*="/cards/"], img[src*="/tokens/"]').forEach(function (img) {
         candidats++;
-        var has = !!lookup(codeFromImg(img), img.alt);
+        var has = !!lookup(codeFromImg(img), img.alt) || !!lookup(null, nomJeton(img));
         if (has) resolus++;
         img.classList.toggle("rbfr-img-has", has);
       });
