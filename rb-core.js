@@ -22,7 +22,7 @@ window.RB = (function(){
   var SET_FR = {
     "Origins":"Origins", "Proving Grounds":"Proving Grounds",
     "Spiritforged":"Spiritforged", "Unleashed":"Unleashed", "Vendetta":"Vendetta",
-    "Radiance":"Radiance"
+    "Radiance":"Radiance", "Arcane Box Set":"Coffret Arcane", "Secret Garden":"Jardin secret"
   };
 
   /* ---------- lexique des mots-clés ----------
@@ -404,7 +404,8 @@ window.RB = (function(){
   function hasFrenchName(c){ return displayName(c) !== nameVO(c); }
 
   function metaSetName(setId){
-    var map = {OGN:"Origins", OGS:"Proving Grounds", SFD:"Spiritforged", UNL:"Unleashed", VEN:"Vendetta"};
+    var map = {OGN:"Origins", OGS:"Proving Grounds", SFD:"Spiritforged", UNL:"Unleashed",
+               VEN:"Vendetta", RAD:"Radiance", ARC:"Arcane Box Set", SGN:"Secret Garden"};
     return map[setId] || setId;
   }
 
